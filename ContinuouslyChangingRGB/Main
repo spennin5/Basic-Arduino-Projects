@@ -1,0 +1,20 @@
+int redPin = 11;
+int greenPin = 12;
+int bluePin = 13;
+
+void setup() {
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  int redColor = random(256);
+  int blueColor = random(256);
+  int greenColor = random(256);
+  analogWrite(redPin,redColor);
+  analogWrite(bluePin,blueColor);
+  analogWrite(greenPin,greenColor);
+  delay(1000);
+}
